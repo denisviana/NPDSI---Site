@@ -2,12 +2,17 @@
 /* Cor Padrão: #003780 */
 
 
+html, body {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
 
 body {
     font-family: 'Comfortaa', cursive;
     background-color: #fff;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: auto;   
 }
 
 .container {
@@ -83,7 +88,7 @@ body {
         text-shadow: 2px 1px 1px rgba(0, 0, 0, 1);
     }
 
-.carrosse-item img{
+.carrosse-item img {
     width: 100%;
 }
 
@@ -98,17 +103,17 @@ body {
     background-color: transparent;
     color: #fff;
     border-radius: 0;
+    text-decoration: none;
 }
 
-    .list-group-item:hover {
-        background-color: #39D5FF;
-        color: #1C2A39;
-    }
+a.list-group-item.flex-column.align-items-start:hover {
+    color: #1297E0;
+}
 
-    .list-group-item:first-child {
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-    }
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
 
 
 .carousel-control-prev .material-icons,
@@ -148,11 +153,11 @@ body {
     margin: 30px 0;
 }
 
-.coordenacao-text h1 {
+    .coordenacao-text h1 {
         color: #fff;
         font-size: 50px;
         text-align: center;
-}
+    }
 
 
 
@@ -185,15 +190,15 @@ body {
     color: #fff;
 }
 
-.texto2 h4 {
-    margin: 0 auto;
-    max-width: 250px;
-}
+    .texto2 h4 {
+        margin: 0 auto;
+        max-width: 250px;
+    }
 
-.texto2 > p {
-    margin: 0 auto;
-    width: 250px;
-}
+    .texto2 > p {
+        margin: 0 auto;
+        width: 250px;
+    }
 
 
 
@@ -232,44 +237,6 @@ body {
 
 @media screen and (max-width: 430px) {
 
-    #coordenador1{
-        margin-top: 10px;
-        margin-bottom: 50px;
-    }
-
-    #coordenador2 {
-        margin-bottom: 50px 0;
-    }
-
-    #img-navbar-logo {
-        display: block;
-        height: 55px;
-        padding: 5px;
-    }
-
-    #img-topo {
-        display: none;
-    }
-
-    .carousel-item img {
-        height: 250px;
-    }
-
-    .sobre-npdsi-text h1 {
-        color: #fff;
-        font-size: 25px;
-        text-align: center;
-    }
-
-    .sobre-npdsi-text p {
-        color: #fff;
-        margin: 0 auto;
-        width: 80%;
-        text-align: justify;
-    }
-
-    .coordenacao-text h1 {
-        color: #fff;
-        font-size: 25px;
-    }
+  
+ 
 }

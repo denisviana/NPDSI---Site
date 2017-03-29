@@ -38,10 +38,9 @@ $(document).ready(function () {
 
 })
 
-function overlayMiniatura(texto) {
-
-    
-}
+$('.carousel').carousel({
+    interval: 6000
+})
 
 
 function overlayMiniaturaOut(id, texto) {
@@ -53,6 +52,3 @@ function overlayMiniaturaOut(id, texto) {
     });
 }
 
-$('.carousel').carousel({
-    interval: 4000
-})
