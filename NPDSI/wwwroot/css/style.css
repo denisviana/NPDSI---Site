@@ -5,9 +5,9 @@
 
 body {
     font-family: 'Comfortaa', cursive;
-    background-color: #eee;
+    background-color: #fff;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .container {
@@ -83,6 +83,10 @@ body {
         text-shadow: 2px 1px 1px rgba(0, 0, 0, 1);
     }
 
+.carrosse-item img{
+    width: 100%;
+}
+
 
 /* Códigos do list-group de Notícias*/
 
@@ -151,22 +155,24 @@ body {
 }
 
 
-.texto1 {
+
+.texto-coord-npdsi {
     display: none;
+    background: rgba(0,0,0,0.6);
     position: absolute;
-    top: 30%;
-    left: 0;
-    width: 100%;
     color: #fff;
+    height: 100%;
+    width: 100%;
 }
 
-    .texto1 h4 {
-        margin: 0 auto;
+
+    .texto-coord-npdsi h4 {
         max-width: 250px;
+        margin: 40% auto;
     }
 
-    .texto1>p {
-        margin: 0 auto;
+    .texto-coord-npdsi > p {
+        margin: -40% auto;
         width: 250px;
     }
 

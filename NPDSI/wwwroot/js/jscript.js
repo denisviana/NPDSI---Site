@@ -3,50 +3,56 @@
 /// <reference path="../lib/bootstrap/dist/js/bootstrap.min.js" />
 /// <reference path="../lib/bootstrap/dist/js/bootstrap.js" />
 
-var offset = $('#barra-de-menus').offset().top;
-var $barraDeMenus = $('#barra-de-menus');
+
 
 $(document).ready(function () {
 
-  
-        $(document).on('scroll', function () {
-            console.log($(window).width());
+    var offset = $('#barra-de-menus').offset().top;
+    var $barraDeMenus = $('#barra-de-menus');
+    $(document).on('scroll', function () {
+        console.log($(window).width());
 
-            if (offset <= $(window).scrollTop()) {
+        if (offset <= $(window).scrollTop()) {
 
-                $barraDeMenus.addClass('fixed-top');
-               
-            } else {
-                $barraDeMenus.removeClass('fixed-top'); 
-            }
-        });
+            $barraDeMenus.addClass('fixed-top');
+
+        } else {
+            $barraDeMenus.removeClass('fixed-top');
+        }
+    });
 
 
-  
-})
+    $('.coordenador-npdsi').mouseenter(function () {
 
-function overlayMiniatura(id, texto) {
+        var div = $(this).children().attr("id");
 
-    $('#' + id).mouseover(function () {
-        console.log("Mouse dentro");
-        $('#' + id).css("opacity", "0.3");
-        $('.' + texto).css("display", "block");
+        $('#'+div).fadeIn(200).css("display","block");
+    });
+
+    $('.coordenador-npdsi').mouseleave(function () {
+      
+        var div = $(this).children().attr("id");
+        $('#'+div).css("display", "none");
 
     });
+
+})
+
+function overlayMiniatura(texto) {
+
+    
 }
 
+
 function overlayMiniaturaOut(id, texto) {
-    $('#' + id).mouseout(function () {
+    $('#' + id).mouseleave(function () {
         console.log("Mouse fora");
         $('#' + id).css("opacity", "1");
         $('.' + texto).css("display", "none");
 
-
     });
 }
 
-
 $('.carousel').carousel({
-    interval: 6000
+    interval: 4000
 })
-
