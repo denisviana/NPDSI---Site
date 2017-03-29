@@ -7,6 +7,7 @@
 
 $(document).ready(function () {
 
+    /*
     var offset = $('#barra-de-menus').offset().top;
     var $barraDeMenus = $('#barra-de-menus');
     $(document).on('scroll', function () {
@@ -19,7 +20,7 @@ $(document).ready(function () {
         } else {
             $barraDeMenus.removeClass('fixed-top');
         }
-    });
+    }); */
 
 
     $('.coordenador-npdsi').mouseenter(function () {
