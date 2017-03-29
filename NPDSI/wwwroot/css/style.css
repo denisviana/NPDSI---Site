@@ -204,6 +204,8 @@ a.list-group-item.flex-column.align-items-start:hover {
 
 @media screen and (max-width: 760px) {
 
+    
+
     #painel-noticias {
         margin-top: 20px;
     }
@@ -235,8 +237,14 @@ a.list-group-item.flex-column.align-items-start:hover {
     }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 757px) {
 
-  
+    div#container-logo {
+        display: none;
+    }
+
+    div#row-principal{
+        margin-top:90px;
+    }
  
 }
