@@ -12,6 +12,9 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
 
+    <link rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/images/favicon.ico" type="image/x-icon">
+
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
 
 </head>
@@ -34,10 +37,11 @@
 
         <div class="navbar-collapse collapse" id="mobile" aria-expanded="false">
             <ul class="navbar-nav ">
-                <li class="nav-item"><a class="nav-link" href="#">PROJETOS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">NOTÍCIAS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">EDITAIS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#sobre-npdsi">SOBRE O NPDSI</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Projetos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Notícias</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Editais</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre-npdsi">Sobre o NPDSI</a></li>
             </ul>
         </div>
 
@@ -58,35 +62,41 @@
     @RenderBody()
 
     <footer>
-        <div class="nav navbar-inverse bg-inverse">
-            <p style="color: #fff">&copy; 2017 - NPDSI</p>
+        <div class="nav rodape">
+            <div class="container rodape">
+                <div class="row">
+                    <div class="col-6 mx-auto" id="rodape">
+                        <ul>
+                            <li>npdsi@undb.edu.br</li>
+                            <li>Av. Colares Moreira, 443, Renascença II</li>
+                        </ul>
+                    </div>
+                  
+                    <div class="col-6">
+                        <ul class="nav">
+                            <li class="item-rede-social">
+                                <a href="#"><img src="~/images/facebook.svg"/></a>
+                            </li>
+                            <li class="item-rede-social">
+                                <a href="#"><img src="~/images/instagram.svg"/></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>
+        <div  style="background-color: #000; text-align:center;">
+            <small style="color: #fff;">&copy; 2017 - NPDSI - Todos os direitos reservados</small>
         </div>
     </footer>
 
 
     <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/js/jscript.js"></script>
-
-    <script>
-        $(function() {
-        $('a[href*=#]').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
-
-
 
     @RenderSection("Scripts", required: false)
 </body>

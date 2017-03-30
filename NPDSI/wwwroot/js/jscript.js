@@ -23,33 +23,31 @@ $(document).ready(function () {
     }); */
 
 
-    $('.coordenador-npdsi').mouseenter(function () {
+    /* Retrair menu collapse no celular ao clicar em um item*/
+    $(".navbar-nav li a").click(function (event) {
+        $(".navbar-collapse").collapse('hide');
+    })
 
-        var div = $(this).children().attr("id");
+        /* Efeito overlay nas imagens quando posicionar o mouse em cima*/
+        $('.coordenador-npdsi').mouseenter(function () {
+            console.log("Mouse enter");
+            var div = $(this).children().attr("id");
 
-        $('#'+div).fadeIn(200).css("display","block");
+            $('#' + div).fadeIn(200).css("display", "block");
+        });
+
+        /* Remove efeito overlay ao retirar imagem*/
+        $('.coordenador-npdsi').mouseleave(function () {
+            console.log("Mouse leave");
+            var div = $(this).children().attr("id");
+            $('#' + div).css("display", "none");
+
+        });
+
+    
+
+    $('.carousel').carousel({
+        interval: 6000
     });
 
-    $('.coordenador-npdsi').mouseleave(function () {
-      
-        var div = $(this).children().attr("id");
-        $('#'+div).css("display", "none");
-
-    });
-
-})
-
-$('.carousel').carousel({
-    interval: 6000
-})
-
-
-function overlayMiniaturaOut(id, texto) {
-    $('#' + id).mouseleave(function () {
-        console.log("Mouse fora");
-        $('#' + id).css("opacity", "1");
-        $('.' + texto).css("display", "none");
-
-    });
-}
-
+});
